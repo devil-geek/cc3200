@@ -12,9 +12,7 @@ Next, you need to change WiFiClient.h in Enerigia. You need to find "private:" i
 | OS         | Location                                                                                      |
 | ---------- | --------------------------------------------------------------------------------------------- |
 | MacOS      | /Applications/Energia.app/Contents/Resources/Java/hardware/cc3200/libraries/WiFi/WiFiClient.h |
-| ---------- | --------------------------------------------------------------------------------------------- |
 | Windows    | `Extracted Energia directory`\hardware\cc3200\libraries\WiFi\WiFiClient.h                     |
-| ---------- | --------------------------------------------------------------------------------------------- |
 | Linux      | `Extracted Energia directory`/hardware/cc3200/libraries/WiFi/WiFiClient.h                     |
 
 
