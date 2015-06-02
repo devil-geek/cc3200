@@ -9,13 +9,13 @@ For more detail, read [the guide](http://energia.nu/Guide_Environment.html#libra
 
 Next, you need to change WiFiClient.h in Enerigia. You need to find "private:" in WiFiClient.h to "protected:". The file is under the following location.
 
-| OS           | Location                                                                                      |
-| -------------:----------------------------------------------------------------------------------------------:|
-| MacOS        | /Applications/Energia.app/Contents/Resources/Java/hardware/cc3200/libraries/WiFi/WiFiClient.h |
-| -------------:----------------------------------------------------------------------------------------------:|
-| Windows      | `Extracted Energia directory`\hardware\cc3200\libraries\WiFi\WiFiClient.h                     |
-| -------------:----------------------------------------------------------------------------------------------:|
-| Linux        | `Extracted Energia directory`/hardware/cc3200/libraries/WiFi/WiFiClient.h                     |
+| OS         | Location                                                                                      |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| MacOS      | /Applications/Energia.app/Contents/Resources/Java/hardware/cc3200/libraries/WiFi/WiFiClient.h |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| Windows    | `Extracted Energia directory`\hardware\cc3200\libraries\WiFi\WiFiClient.h                     |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| Linux      | `Extracted Energia directory`/hardware/cc3200/libraries/WiFi/WiFiClient.h                     |
 
 
 You can find the source code like following,
