@@ -7,7 +7,7 @@
 #include "SimpleLog.h"
 
 // Use SSL to communite with MODE APIs
-#define MODE_HOST "api.tinkermode.com"
+#define MODE_HOST (char*)ModeDevice::m_APIHost.c_str()
 #define MODE_PORT 443
 #define USE_SSL true
 
@@ -23,6 +23,7 @@
 #define PING_TIMEOUT (20*1000)
 
 ModeDevice::ModeDevice(const char* token, const char* device_id) :
+m_APIHost("api.tinkermode.com"),
 m_websocket(new WebSocketClient),
 m_reconnect_timestamp(0),
 m_ping_timestamp(0),
@@ -48,6 +49,14 @@ m_open_callback(NULL)
 }
 
 ModeDevice::~ModeDevice() {
+}
+
+void ModeDevice::setAPIHost(const char* host) {
+  m_APIHost = host;
+}
+
+const char* ModeDevice::getAPIHost() {
+  return m_APIHost.c_str();
 }
 
 // Register the callback function to be called when a command is delivered.
