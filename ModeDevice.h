@@ -17,6 +17,7 @@ typedef int (*CloseCallback)(String* command);
 typedef int (*OpenCallback)(String* command);
 
 class ModeDevice {
+  String m_APIHost;
   WebSocketClient* m_websocket;
   // I don't like to have instances here, but somehow WiFiClient new is prohibited :-(
   ModeWiFiClient m_websocket_client;
@@ -47,6 +48,10 @@ class ModeDevice {
 
   ModeDevice(const char* token, const char* deviceId);
   ~ModeDevice();
+
+  // You have to call this method before calling other methods.
+  void setAPIHost(const char* host);
+  const char* getAPIHost();
 
   int triggerEvent(const String* event);
   int handshakeForCommand();
